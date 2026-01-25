@@ -1,11 +1,10 @@
 #include<iostream>
-#include<cstdio> 
 using namespace std;
 int main()
 {
-    int a=0,b=0;
+    long long a=0,b=0;
     cin>>a>>b;
-    double c=(float)a/b;
-    printf("%.3lf",c);
+    long long c=(b%a==0 ? a+b : b-a);
+    cout<<c<<endl;
     return 0;
 }
