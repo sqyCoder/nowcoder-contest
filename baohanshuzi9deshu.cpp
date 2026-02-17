@@ -3,18 +3,20 @@ using namespace std;
 
 int main()
 {
-    int count = 0;
-    for (int i = 1; i <= 2019; i++)
+int i=0,j=0,count=0;
+for(i=1;i<=2019;i++)
+{
+    int m=i;
+    while(m!=0)
     {
-        int ge = i % 10; 
-        int shi = (i / 10) % 10;  
-        int bai = (i / 100) % 10; 
-        int qian = (i / 1000) % 10; 
-        if (ge == 9 || shi == 9 || bai == 9 || qian == 9)
+        if(m%10==9)
         {
-            count++;
+        count++;
+        break;
         }
+        m=m/10;
     }
-    cout << count << endl;
+}
+cout<<count<<endl;
     return 0;
 }
